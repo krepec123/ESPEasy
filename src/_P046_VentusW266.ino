@@ -1,5 +1,5 @@
 #include "_Plugin_Helper.h"
-#ifdef USES_P046
+ifdef USES_P046
 //#######################################################################################################
 //#################################### Plugin 046: Ventus W266 [Testing] ################################
 //#######################################################################################################
@@ -80,20 +80,20 @@
 
 
 //edwin: Disabled for now: hardware is not generic enough and  uses lots of ram and iram,
-#ifdef PLUGIN_BUILD_DISABLED
+ifdef PLUGIN_BUILD_DISABLED
 
-#define PLUGIN_046_DEBUG            true                        // Shows received frames and crc in log@INFO
+define PLUGIN_046_DEBUG            true                        // Shows received frames and crc in log@INFO
 
-#define PLUGIN_046                                              // Mandatory framework constants
-#define PLUGIN_ID_046               46
-#define PLUGIN_NAME_046             "Hardware - Ventus W266 [TESTING]"
-#define PLUGIN_VALUENAME1_046       ""
-#define PLUGIN_VALUENAME2_046       ""
-#define PLUGIN_VALUENAME3_046       ""
+define PLUGIN_046                                              // Mandatory framework constants
+define PLUGIN_ID_046               46
+define PLUGIN_NAME_046             "Hardware - Ventus W266 [TESTING]"
+define PLUGIN_VALUENAME1_046       ""
+define PLUGIN_VALUENAME2_046       ""
+define PLUGIN_VALUENAME3_046       ""
 
-#define Plugin_046_MagicByte        0x7F                        // When we read this uint8_t on MOSI, switch to MISO
-#define Plugin_046_RAW_BUFFER_SIZE  24                          // Payload is 23 bytes, added space for header
-#define Plugin_046_Payload          23
+define Plugin_046_MagicByte        0x7F                        // When we read this uint8_t on MOSI, switch to MISO
+define Plugin_046_RAW_BUFFER_SIZE  24                          // Payload is 23 bytes, added space for header
+define Plugin_046_Payload          23
 
 struct P046_data_struct {
   int8_t Plugin_046_MOSIpin = -1;                                 // GPIO pins
